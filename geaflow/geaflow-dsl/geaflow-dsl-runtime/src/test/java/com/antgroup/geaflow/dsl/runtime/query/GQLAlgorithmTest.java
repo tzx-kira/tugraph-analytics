@@ -97,6 +97,17 @@ public class GQLAlgorithmTest {
             .checkSinkResult();
     }
 
+    // 注册测试方法
+    @Test
+    public void testSingleVertexCirclesDetection() throws Exception {
+        QueryTester
+            .build()
+            .withGraphDefine("/query/tzx_test_cycle_graph.sql")
+            .withQueryPath("/query/gql_algorithm_svcd_circle.sql")
+            .execute()
+            .checkSinkResult();
+    }
+
     @Test
     public void testAlgorithmKHop() throws Exception {
         QueryTester

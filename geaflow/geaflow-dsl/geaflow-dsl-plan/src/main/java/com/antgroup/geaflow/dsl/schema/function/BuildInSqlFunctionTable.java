@@ -114,6 +114,10 @@ import org.apache.calcite.sql.SqlOperator;
 import org.apache.calcite.sql.SqlSyntax;
 import org.apache.calcite.sql.util.ListSqlOperatorTable;
 
+import com.antgroup.geaflow.dsl.udf.graph.SingleVertexCirclesDetection;
+
+
+
 /**
  * SQL build-in {@link SqlFunction}s.
  */
@@ -213,6 +217,7 @@ public class BuildInSqlFunctionTable extends ListSqlOperatorTable {
             .add(GeaFlowFunction.of(IncWeakConnectedComponents.class))
             .add(GeaFlowFunction.of(CommonNeighbors.class))
             .add(GeaFlowFunction.of(IncKHopAlgorithm.class))
+            .add(GeaFlowFunction.of(SingleVertexCirclesDetection.class))
             .build();
 
     public BuildInSqlFunctionTable(GQLJavaTypeFactory typeFactory) {
